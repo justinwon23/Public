@@ -1,8 +1,72 @@
 <!DOCTYPE html>
-<html>
-    <h1> Registration Form </h1>
-
-
+<html lang="en">
+<head> 
+    <title> Registration Form </title> 
+</head>
+<body>
+        <h1> Registration Form </h1>
+    
+        <div>
+            <label> First Name: * : </label>
+            <input type="text" name="first name" >
+        </div>
+        
+        <div>
+            <label> Last Name: * : </label>
+            <input type="text" name="last name" >
+        </div>
+        
+        <div>
+            <label> Email Address: * : </label>
+            <input type="text" name="email" >
+        </div>
+        
+        <div>
+            <label> Password: * : </label>
+            <input type="text" name="password" >
+        </div>
+        
+        <div>
+         <label>  Confirm Password: * : </label>
+        <input type="text" name="confirm password" >
+        
+        </div>
+        
+        <div>
+            <label>Birthday: </label>
+            <input type="text" name="birthday" 
+            placeholder="mm/dd/yy" >
+        </div>
+        <p> Gender Identity </p>
+        <div>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">male</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">female</label>
+            <input type="radio" name="gender" value="non-binary" id="non-binary">
+            <label for="non-binary">non-binary</label>
+            <input type="radio" name="gender" value="no-answer" id="no-answer">
+            <label for="no-answer">I prefer not to answer</label>
+        </div>
+        <p> A short description about myself: </p>
+        <div>
+            <textarea name="description" cols="20" rows="3"></textarea>
+        </div>
+        <p> Favorite Language:
+        <select name="favorite-language">
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>C#</option>
+            <option>Html</option>
+        </select>
+        </p>
+        <div>
+            <input type="checkbox" name="email-updates" id="email-updates">
+            <label for="email-updates">Yes, I would like to receive periodic email updates</label>
+        </div>
+        <input type="submit" value="Create Account" >
+        <p>* Indicates a required field</p>
+        
 
 
 

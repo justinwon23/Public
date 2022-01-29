@@ -1,4 +1,3 @@
 # Hello World
     
-This is a readme for our first project!
-haha
+This is a readme for my current portfolio attending Coding Dojo!

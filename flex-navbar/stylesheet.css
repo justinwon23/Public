@@ -1,0 +1,64 @@
+.nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    background-color: gray;
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-title {
+    color: white;
+    margin-left: 20px;
+    
+
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    margin: 30px 0px 0px 12px;
+    vertical-align: middle;
+    list-style-type: none;
+
+
+    
+    
+    
+}
+
+li {
+    margin: 0px 20px 0px 10px;
+
+
+}
+
+.btn {
+    margin: -15px -5px 0px 0px;
+    background-color: blueviolet;
+    color: white;
+    width: 115px;
+    height: 30px;
+    border-color: black;
+    border-style: solid;
+    box-shadow: 5px 5px black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+        font-weight: bold;
+
+}
+
+
+

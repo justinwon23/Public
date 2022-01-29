@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card {
+    height: 175px;
+    width: 450px;
+    background-color: white;
+    border: 1px solid teal;
+    padding-bottom: 10px;
+    
+    
+
+}
+
+.stripe {
+
+    height: 55px;
+    background-color: teal;
+
+}
+
+.icon {
+    margin-top: -20px;
+    /* position: relative;
+    bottom: 20px; */
+    height: 45px;
+    width: 45px;
+    overflow: visible;
+
+    margin-left: 15px;
+}
+
+.location {
+    height: 10px;
+    width: 10px;
+    margin-left: 10px;
+
+}
+
+.gear {
+    height: 10px;
+    width: 10px;
+    margin-left: 10px;
+
+}
+
+.text {
+    margin-left: 10px;
+    
+}
+
+
+.developer {
+    margin: 5px;
+}
+
+h1 {
+    font-size: 15px;
+    padding: 5px;
+}
+
+h2 {
+    font-size: 12px;
+}
+
+p {
+    font-size: 10px;
+}
+
+.edit {
+    font-size: 10px;
+    /* display: inline-block;
+    margin-bottom: 10px; */
+}
+
+/* a {
+    display: inline-block;
+    margin-bottom: 10px;
+} */
+
+

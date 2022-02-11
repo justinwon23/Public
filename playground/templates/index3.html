@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.box {
+  background-color: {{color}};
+  height: 100px;
+  width: 100px;
+  border: solid black;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+.container {
+
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+</style>
+</head>
+<body>
+    
+    <h1>Welcome!</h1>
+    <div class="container">
+        {% for i in range(0, num) %}
+        <div class="box"></div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

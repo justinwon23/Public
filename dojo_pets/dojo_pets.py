@@ -1,3 +1,7 @@
+# How to return energy/health to preserve
+
+
+
 class Ninja:
 # implement __init__( first_name , last_name , treats , pet_food , pet )
     def __init__(self, first_name, last_name, treats, pet_food, pet):
@@ -5,18 +9,18 @@ class Ninja:
         self.last_name = last_name
         self.treats = treats
         self.pet_food = pet_food
-        self.pet = Pet("Gregory", "Lion", "Destroy")
+        self.pet = pet
 
     def walk(self):
-        self.play = play()
+        self.pet.play()
         return self
 
     def feed(self):
-        self.eat = eat()
+        self.pet.eat()
         return self
 
     def bathe(self):
-        self.bathe = noise(self)
+        self.pet.noise()
         return self
 
 class Pet:
@@ -25,24 +29,37 @@ class Pet:
         self.name = name
         self.type = type
         self.tricks = tricks
+        self.energy = 80
+        self.health = 100
     
     def sleep(self):
-        print(f"{self.name} energy increased by 25!")
+        self.energy += 25
         return self
     
     def eat(self):
-        print(f"{self.name} energy increased by 5 & health by 10!")
-        return self
+        self.energy += 5
+        self.health += 10
+        return self.energy, self.health #This is questionable
+        
     
     def play(self):
-        print(f"{self.name}'s health has increased by 5!")
+        self.health += 5
+        self.energy -= 15
         return self
     
     def noise(self):
         print(f"{self.name} GO RAWRRRRRRR")
         return self
 
+Gregory= Pet("Gregory", "Lion", ["sit, speak, attack "])
 
-justin = Ninja("Justin", "Won","bone", "chicken", "Dinosaur")
+justin = Ninja("Justin", "Won","bone", "chicken", Gregory)
 
-justin.pet.play().sleep().eat().noise()
+justin.bathe().feed().feed().feed()
+print(Gregory.health)
+print(Gregory.energy)
+
+
+
+
+

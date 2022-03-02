@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New recipe</title>
+</head>
+<body>
+
+    <h3>Add a new recipe</h3>
+    <form action="/recipe/create" method="post">
+
+        <div class="mb-3">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" name="name">
+            {% for message in get_flashed_messages(category_filter=["err_recipe_name"]) %}
+            <p class="alert alert-danger">{{message}}</p>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            <label for="description">Description</label>
+            <input class="form-control" type="text" name="description">
+            {% for message in get_flashed_messages(category_filter=["err_recipe_description"]) %}
+            <p class="alert alert-danger">{{message}}</p>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            <label for="instructions">Instructions</label>
+            <input class="form-control" type="text" name="instructions">
+            {% for message in get_flashed_messages(category_filter=["err_recipe_instructions"]) %}
+            <p class="alert alert-danger">{{message}}</p>
+            {% endfor %}
+        </div>
+        <div>
+            <label for="date_made_on">Date Made On</label>
+            <input type="date" name="date_made_on">
+        </div>
+        <div>
+            <label for="under_30_mins">Under 30 mins</label>
+            <select name="under_30_mins">
+                
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+
+
+
+            </select>
+        </div>
+
+        <button class="btn btn-success">Submit</button>
+
+
+
+    </form>
+
+    
+</body>
+</html>

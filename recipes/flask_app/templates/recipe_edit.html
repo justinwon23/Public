@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New recipe</title>
+</head>
+<body>
+
+    <h3>Add a new recipe</h3>
+    <form action="/recipes/modify" method="post">
+        <input type="hidden" name="id" value={{recipe.id}}>
+
+        <div class="mb-3">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" name="name" value="{{recipe.name}}">
+        </div>
+        <div class="mb-3">
+            <label for="description">Description</label>
+            <input class="form-control" type="text" name="description" value="{{recipe.description}}">
+        </div>
+        <div class="mb-3">
+            <label for="instructions">Instructions</label>
+            <input class="form-control" type="text" name="instructions" value="{{recipe.instructions}}">
+        </div>
+        <div>
+            <label for="date_made_on">Date Made On</label>
+            <input type="date" name="date_made_on" value="{{recipe.date_made_on}}">
+        </div>
+        <div>
+            <label for="under_30_mins">Under 30 mins</label>
+            <select name="under_30_mins">
+                
+                {% if recipe.under_30_mins == 'yes' %}
+                <option value="yes" selected>Yes</option>
+                <option value="no">No</option>
+                {% else %}
+                <option value="yes" >Yes</option>
+                <option value="no" selected>No</option>
+                {% endif %}
+
+
+            </select>
+        </div>
+
+        <button class="btn btn-success">Submit</button>
+
+
+
+    </form>
+    
+</body>
+</html>
